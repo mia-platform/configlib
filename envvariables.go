@@ -23,7 +23,7 @@ import (
 	"github.com/spf13/viper"
 )
 
-// EnvConfig to setup to access to env variables
+// EnvConfig to setup to access to env variables.
 type EnvConfig struct {
 	Key          string
 	Variable     string
@@ -31,7 +31,7 @@ type EnvConfig struct {
 	Required     bool
 }
 
-// GetEnvVariables env variables
+// GetEnvVariables extracts configured environment variables and unmarshals them in provided `output` interface.
 func GetEnvVariables(envVariablesConfig []EnvConfig, output interface{}) error {
 	v := viper.New()
 	v.AutomaticEnv()

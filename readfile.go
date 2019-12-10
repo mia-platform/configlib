@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package helpers
+package configlib
 
 import (
 	"fmt"
@@ -22,7 +22,7 @@ import (
 	"os"
 )
 
-// ReadFile is a utility to read a file from the file system
+// ReadFile is a utility to read a file from the file system.
 func ReadFile(filePath string) ([]byte, error) {
 	file, err := os.Open(filePath)
 	if err != nil {
