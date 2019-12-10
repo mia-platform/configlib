@@ -1,4 +1,4 @@
-module github.com/mia-platform/configlib
+module github.com/mia-platform/config-lib
 
 go 1.13
 
