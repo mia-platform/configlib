@@ -1,6 +1,6 @@
 <div align="center">
 
-# Glogger
+# Config Lib
 
 [![Build Status][github-actions-svg]](gitub-actions)
 [![Go Report Card][go-report-card]](go-report-card-link)
@@ -56,12 +56,12 @@ if err != nil {
 type Config struct {}
 
 func loadServiceConfiguration(path, fileName string) (Config, error) {
-	jsonSchema, err := helpers.ReadFile(configSchemaPath)
+	jsonSchema, err := configlib.ReadFile(configSchemaPath)
 	if err != nil {
 		return nil, err
 	}
 	var config ServiceConfig
-	err = helpers.GetConfigFromFile(fileName, path, jsonSchema, &config)
+	err = configlib.GetConfigFromFile(fileName, path, jsonSchema, &config)
 	if err != nil {
 		return nil, err
 	}
@@ -81,12 +81,12 @@ if err != nil {
 type Config struct {}
 
 func loadServiceConfiguration(path, fileName string) (Config, error) {
-	jsonSchema, err := helpers.ReadFile(configSchemaPath)
+	jsonSchema, err := configlib.ReadFile(configSchemaPath)
 	if err != nil {
 		return nil, err
 	}
 	var config ServiceConfig
-	err = helpers.GetConfigFromFile(fileName, path, nil, &config)
+	err = configlib.GetConfigFromFile(fileName, path, nil, &config)
 	if err != nil {
 		return nil, err
 	}
