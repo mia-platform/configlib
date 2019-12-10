@@ -30,8 +30,9 @@ type EnvVariables struct {
   StringValue string
   BoolValue   bool
 }
+
 var envVariablesConfig = []configlib.EnvConfig{
-  {
+        {
 		Key:          "SOME_STRING",
 		Variable:     "StringValue",
 		DefaultValue: "",
@@ -44,8 +45,7 @@ var envVariablesConfig = []configlib.EnvConfig{
 }
 
 var env EnvVariables
-err := configlib.GetEnvVariables(envVariablesConfig, &env)
-if err != nil {
+if err := configlib.GetEnvVariables(envVariablesConfig, &env); err != nil {
   panic(err.Error())
 }
 ```
@@ -60,11 +60,12 @@ func loadServiceConfiguration(path, fileName string) (Config, error) {
 	if err != nil {
 		return nil, err
 	}
+
 	var config ServiceConfig
-	err = configlib.GetConfigFromFile(fileName, path, jsonSchema, &config)
-	if err != nil {
+	if err := configlib.GetConfigFromFile(fileName, path, jsonSchema, &config); err != nil {
 		return nil, err
 	}
+
 	return config, err
 }
 
@@ -81,15 +82,11 @@ if err != nil {
 type Config struct {}
 
 func loadServiceConfiguration(path, fileName string) (Config, error) {
-	jsonSchema, err := configlib.ReadFile(configSchemaPath)
-	if err != nil {
-		return nil, err
-	}
 	var config ServiceConfig
-	err = configlib.GetConfigFromFile(fileName, path, nil, &config)
-	if err != nil {
+	if err := configlib.GetConfigFromFile(fileName, path, nil, &config); err != nil {
 		return nil, err
 	}
+
 	return config, err
 }
 
