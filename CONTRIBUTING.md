@@ -1,4 +1,4 @@
-# Contribution Guidelines for the Config-Lib library
+# Contribution Guidelines for the configlib library
 
 First off, thank you for considering contributing to this project.
 

@@ -18,7 +18,7 @@ This library handle json in a case sensitive mode.
 ## Install
 
 ```sh
-go get -u github.com/mia-platform/config-lib
+go get -u github.com/mia-platform/configlib
 ```
 
 ## Example usage
@@ -112,9 +112,9 @@ see the [tags on this repository](https://github.com/mia-platform/terraform-goog
 This project is licensed under the Apache License 2.0 - see the [LICENSE.md](LICENSE.md)
 file for details
 
-[github-actions]: https://github.com/mia-platform/config-lib/actions
-[github-actions-svg]: https://github.com/mia-platform/config-lib/workflows/Test%20and%20build/badge.svg
-[godoc-svg]: https://godoc.org/github.com/mia-platform/config-lib?status.svg
-[godoc-link]: https://godoc.org/github.com/mia-platform/config-lib
-[go-report-card]: https://goreportcard.com/badge/github.com/mia-platform/config-lib
-[go-report-card-link]: https://goreportcard.com/report/github.com/mia-platform/config-lib
+[github-actions]: https://github.com/mia-platform/configlib/actions
+[github-actions-svg]: https://github.com/mia-platform/configlib/workflows/Test%20and%20build/badge.svg
+[godoc-svg]: https://godoc.org/github.com/mia-platform/configlib?status.svg
+[godoc-link]: https://godoc.org/github.com/mia-platform/configlib
+[go-report-card]: https://goreportcard.com/badge/github.com/mia-platform/configlib
+[go-report-card-link]: https://goreportcard.com/report/github.com/mia-platform/configlib
