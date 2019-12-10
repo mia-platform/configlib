@@ -1,0 +1,44 @@
+{
+  "lower-case-key": {
+    "kbool": true,
+    "kstring": "my-string",
+    "kint": 12,
+    "kfloat": 13.50,
+    "array-of-string": [
+      "my",
+      "values"
+    ],
+    "array-of-number": [
+      1,
+      2,
+      3
+    ],
+    "something": {
+      "a": "b",
+      "c": "d"
+    }
+  },
+  "UPPER-CASE-KEY": {
+    "kbool": false,
+    "kstring": "my-other-string",
+    "kint": 4,
+    "kfloat": 44.50,
+    "array-of-string": [
+      "my",
+      "other",
+      "value"
+    ],
+    "array-of-number": [
+      6,
+      7,
+      8
+    ],
+    "something": {
+      "x": "y",
+      "z": "v"
+    }
+  },
+  "CamelCaseKey": {
+    "kint": 92
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "type": "object",
+  "additionalProperties": {
+    "type": "object",
+    "properties": {
+      "kbool": {
+        "type": "boolean"
+      },
+      "kstring": {
+        "type": "string"
+      },
+      "kint": {
+        "type": "integer"
+      },
+      "kfloat": {
+        "type": "number"
+      },
+      "array-of-string": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "array-of-number": {
+        "type": "array",
+        "items": {
+          "type": "number"
+        }
+      },
+      "something": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    "required": [
+      "kint"
+    ]
+  }
+}
