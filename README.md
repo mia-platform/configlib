@@ -2,9 +2,9 @@
 
 # Config Lib
 
-[![Build Status][github-actions-svg]](gitub-actions)
-[![Go Report Card][go-report-card]](go-report-card-link)
-[![GoDoc][godoc-svg]](godoc-link)
+[![Build Status][github-actions-svg]][github-actions]
+[![Go Report Card][go-report-card]][go-report-card-link]
+[![GoDoc][godoc-svg]][godoc-link]
 
 </div>
 
