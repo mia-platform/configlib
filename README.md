@@ -105,11 +105,11 @@ and the process for submitting pull requests to us.
 ## Versioning
 
 We use [SemVer][semver] for versioning. For the versions available,
-see the [tags on this repository](https://github.com/mia-platform/terraform-google-project/tags).
+see the [tags on this repository](https://github.com/mia-platform/configlib/tags).
 
 ## License
 
-This project is licensed under the Apache License 2.0 - see the [LICENSE.md](LICENSE.md)
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE)
 file for details
 
 [github-actions]: https://github.com/mia-platform/configlib/actions
@@ -118,3 +118,4 @@ file for details
 [godoc-link]: https://godoc.org/github.com/mia-platform/configlib
 [go-report-card]: https://goreportcard.com/badge/github.com/mia-platform/configlib
 [go-report-card-link]: https://goreportcard.com/report/github.com/mia-platform/configlib
+[semver]: https://semver.org/
