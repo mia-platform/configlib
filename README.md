@@ -23,50 +23,23 @@ go get -u github.com/mia-platform/configlib
 
 ## Example usage
 
-### Get env variables
-
-```go
-type EnvVariables struct {
-  StringValue string
-  BoolValue   bool
-}
-
-var envVariablesConfig = []configlib.EnvConfig{
-        {
-		Key:          "SOME_STRING",
-		Variable:     "StringValue",
-		DefaultValue: "",
-	},
-	{
-		Key:      "BOOLEAN_KEY",
-		Variable: "BoolValue",
-		Required: true,
-	},
-}
-
-var env EnvVariables
-if err := configlib.GetEnvVariables(envVariablesConfig, &env); err != nil {
-  panic(err.Error())
-}
-```
-
 ### Load file service json configuration - with json schema validation
 
 ```go
 type Config struct {}
 
 func loadServiceConfiguration(path, fileName string) (Config, error) {
-	jsonSchema, err := configlib.ReadFile(configSchemaPath)
-	if err != nil {
-		return nil, err
-	}
+  jsonSchema, err := configlib.ReadFile(configSchemaPath)
+  if err != nil {
+    return nil, err
+  }
 
-	var config ServiceConfig
-	if err := configlib.GetConfigFromFile(fileName, path, jsonSchema, &config); err != nil {
-		return nil, err
-	}
+  var config ServiceConfig
+  if err := configlib.GetConfigFromFile(fileName, path, jsonSchema, &config); err != nil {
+    return nil, err
+  }
 
-	return config, err
+  return config, err
 }
 
 // Load service configuration
@@ -82,12 +55,12 @@ if err != nil {
 type Config struct {}
 
 func loadServiceConfiguration(path, fileName string) (Config, error) {
-	var config ServiceConfig
-	if err := configlib.GetConfigFromFile(fileName, path, nil, &config); err != nil {
-		return nil, err
-	}
+  var config ServiceConfig
+  if err := configlib.GetConfigFromFile(fileName, path, nil, &config); err != nil {
+    return nil, err
+  }
 
-	return config, err
+  return config, err
 }
 
 // Load service configuration
@@ -96,6 +69,10 @@ if err != nil {
   log.Fatal(err.Error())
 }
 ```
+
+### Get env variables
+
+This feature is deprecated. Please use another lib, like [this](https://github.com/caarlos0/env).
 
 ## Contributing
 
