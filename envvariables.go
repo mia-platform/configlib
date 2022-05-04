@@ -31,6 +31,7 @@ type EnvConfig struct {
 	Required     bool
 }
 
+// Deprecated: use a library to handle env variables, such as [env](https://github.com/caarlos0/env).
 // GetEnvVariables extracts configured environment variables and unmarshals them in provided `output` interface.
 func GetEnvVariables(envVariablesConfig []EnvConfig, output interface{}) error {
 	v := viper.New()
