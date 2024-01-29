@@ -17,7 +17,7 @@
 package configlib
 
 import (
-	"io/ioutil"
+	"io"
 	"os"
 	"strings"
 	"testing"
@@ -234,7 +234,7 @@ func readFile(t *testing.T, filePath string) []byte {
 	jsonFile, err := os.Open(filePath)
 	defer closeJSONFile(t, jsonFile)
 	assert.Equal(t, err, nil, "Failed to open json schema file.")
-	byteValue, err := ioutil.ReadAll(jsonFile)
+	byteValue, err := io.ReadAll(jsonFile)
 	assert.Equal(t, err, nil, "Failed to read json schema file.")
 	return byteValue
 }
