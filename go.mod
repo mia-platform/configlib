@@ -1,6 +1,6 @@
 module github.com/mia-platform/configlib
 
-go 1.21
+go 1.20
 
 require (
 	github.com/knadh/koanf/parsers/json v0.1.0
